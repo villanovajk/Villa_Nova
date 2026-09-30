@@ -27,8 +27,9 @@ export const calculatePricing = ({ bookingType, villa, selectedRooms = [], night
 
   // Extra-guest surcharge: only applies to accommodation bookings (full villa / rooms)
   let extraGuestFee = 0;
+  let extraGuestCount = 0;
   if (["full-villa", "single-room", "two-rooms", "three-rooms"].includes(bookingType) && guests > includedCapacity) {
-    const extraGuestCount = guests - includedCapacity;
+    extraGuestCount = guests - includedCapacity;
     const perExtraGuestFee = bookingType === "full-villa"
       ? (villa.extraGuestFee || 0)
       : bookingConfig.rooms.extraGuestFee;
@@ -44,6 +45,8 @@ export const calculatePricing = ({ bookingType, villa, selectedRooms = [], night
   return {
     baseAmount,
     extraGuestFee,
+    extraGuestCount,
+    extraChargeApplicable: extraGuestCount > 0,
     cleaningFee,
     serviceFee,
     tax,
