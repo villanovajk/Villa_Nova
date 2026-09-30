@@ -168,6 +168,7 @@ export default function SearchWidget({ onSearch }) {
               <option value="25" className="bg-luxury-charcoal text-white" style={{ color: "white", background: "#161616" }}>10 – 25 Guests</option>
               <option value="50" className="bg-luxury-charcoal text-white" style={{ color: "white", background: "#161616" }}>25 – 50 Guests</option>
               <option value="100" className="bg-luxury-charcoal text-white" style={{ color: "white", background: "#161616" }}>50 – 100 Guests</option>
+              <option value="300" className="bg-luxury-charcoal text-white" style={{ color: "white", background: "#161616" }}>100 – 300+ Guests</option>
             </>
           ) : (
             <>
