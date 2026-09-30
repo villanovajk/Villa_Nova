@@ -203,7 +203,7 @@ export default function VillaDetailPage() {
                 <span className="text-xs uppercase tracking-widest text-white/50">Accommodates</span>
                 <span className="text-lg font-serif text-white">{villa.guests} Guests</span>
                 {villa.extraGuestsAllowed > 0 && (
-                  <span className="text-[10px] font-light text-luxury-gold">+{villa.extraGuestsAllowed} Extra Allowed</span>
+                  <span className="text-[10px] font-light text-luxury-gold">+{villa.extraGuestsAllowed} Extra Allowed (extra charge applicable)</span>
                 )}
               </div>
               <div className="flex flex-col items-center justify-center text-center space-y-2 border-r border-white/10">
