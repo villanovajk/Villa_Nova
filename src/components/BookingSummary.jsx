@@ -120,6 +120,12 @@ export default function BookingSummary({
             </div>
           )}
 
+          {pricing.extraChargeApplicable && (
+            <div className="text-[11px] leading-relaxed text-luxury-gold/90 border border-luxury-gold/20 bg-luxury-gold/5 px-3 py-2">
+              Extra guest ({pricing.extraGuestCount}) — extra charges are applicable and will be collected at the time of payment.
+            </div>
+          )}
+
           <div className="flex justify-between text-xs">
             <span>Luxury Cleaning Fee</span>
             <span className="text-green-400 font-medium font-sans uppercase text-[10px] tracking-wider bg-green-500/10 px-2 py-0.5 border border-green-500/20">Free</span>
