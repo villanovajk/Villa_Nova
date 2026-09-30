@@ -50,7 +50,7 @@ export default function FunctionSpaceBooking({
       <div className="flex items-start gap-2 bg-luxury-gold/5 p-3 text-[11.5px] font-light text-luxury-gold border border-luxury-gold/10">
         <Info size={14} className="flex-shrink-0 mt-0.5" />
         <div>
-          Flat rate: {formatCurrency(bookingConfig.functionSpace.flatRate)} per event (up to {bookingConfig.functionSpace.capacity} guests).
+          Flat rate: {formatCurrency(bookingConfig.functionSpace.flatRate)} per event (up to {bookingConfig.functionSpace.capacity}+ guests).
           {" "}Want the villa too? {bookingConfig.functionSpaceWithVilla.label} is available for {formatCurrency(bookingConfig.functionSpaceWithVilla.price)} — contact us to arrange.
         </div>
       </div>
