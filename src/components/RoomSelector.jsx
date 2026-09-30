@@ -72,7 +72,7 @@ export default function RoomSelector({
                 {isAvailable ? (isSelected ? "Selected" : "Available") : "Booked"}
               </span>
               <span className="text-[9px] text-luxury-gold/70 tracking-wide">
-                {room.capacity} Guests (+{bookingConfig.rooms.extraCapacity} Extra)
+                {room.capacity} Guests (+{bookingConfig.rooms.extraCapacity} Extra, extra charge applicable)
               </span>
             </button>
           );
