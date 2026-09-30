@@ -21,14 +21,14 @@ export const siteImages = {
       baths: 5,
       guests: 12,
       extraGuestsAllowed: 4,
-      extraGuestFee: 1000,
+      extraGuestFee: 0, // No per-head amount added to the booking total; extra charge is applicable at payment
       featuredImage: "/hero-bg.jpg",
       description: "An architectural masterpiece of red clay brickwork and exposed concrete, NOVA blends traditional craftsmanship with raw tropical luxury. Featuring high pitched wooden roofs, private balconies with panoramic forest vistas, and a beautiful open courtyard. The interior boasts premium teakwood furniture, modern smart home controls, and custom ambient lighting.",
       amenities: ["Private Pool", "Private Chef", "Tropical Courtyard", "Valet Parking", "Spa & Wellness Wing", "Wine Cellar", "Home Cinema", "Outdoor Kitchen", "Swimming Pool", "Car Parking", "Room Heaters (All Rooms)"],
       rules: [
-        "Check-in: 2:00 PM",
-        "Check-out: 11:00 AM",
-        "Max occupancy: 12 guests (up to 4 extra guests allowed at ₹1,000/person per night)",
+        "Check-in: 12:00 PM",
+        "Check-out: 12:00 PM",
+        "Max occupancy: 12 guests (up to 4 extra guests allowed; extra guest charges are applicable at the time of payment)",
         "No smoking inside the villa",
         "No loud parties after 11:00 PM"
       ],
@@ -87,12 +87,12 @@ export const bookingConfig = {
   rooms: {
     baseCapacity: 3, // Guests included per room
     extraCapacity: 1, // Extra guests allowed per room, beyond baseCapacity
-    extraGuestFee: 1000 // ₹ per extra guest, per night
+    extraGuestFee: 0 // Extra guest charge is not added to the total; it is applicable at the time of payment
   },
   functionSpace: {
     flatRate: 40000, // Flat price per event, regardless of duration
     minimumHours: 3,
-    capacity: 100
+    capacity: 300
   },
   functionSpaceWithVilla: {
     price: 60000, // Flat combo price: Function Space + Full Villa access
