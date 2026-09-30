@@ -25,7 +25,7 @@ export default function PropertySection({ villa }) {
   const startingRoomPrice = sortedRooms[0]?.pricePerNight;
   const roomImage = "/room-suite.jpg";
   const functionSpaceImage = "/function-space.png";
-  const roomCapacityLabel = `${bookingConfig.rooms.baseCapacity} Guests / Room (+${bookingConfig.rooms.extraCapacity} Extra)`;
+  const roomCapacityLabel = `${bookingConfig.rooms.baseCapacity} Guests / Room (+${bookingConfig.rooms.extraCapacity} Extra, extra charge applicable)`;
 
   const cards = [
     {
@@ -66,7 +66,7 @@ export default function PropertySection({ villa }) {
       description: "Host weddings, private dinners, and corporate events in our elegant function space, with the villa grounds included.",
       priceLabel: `${formatCurrency(bookingConfig.functionSpace.flatRate)} / event`,
       meta: [
-        { icon: <Users size={13} className="text-luxury-gold/70" />, label: `Up to ${bookingConfig.functionSpace.capacity} Guests` },
+        { icon: <Users size={13} className="text-luxury-gold/70" />, label: `Up to ${bookingConfig.functionSpace.capacity}+ Guests` },
         { icon: <Award size={13} className="text-luxury-gold/70" />, label: `+ Villa: ${formatCurrency(bookingConfig.functionSpaceWithVilla.price)}` },
       ],
       cta: "Book Function Space",
